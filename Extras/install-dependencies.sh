@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 http_fetch() {
 	if command -v wget >/dev/null 2>&1; then
@@ -11,8 +11,13 @@ http_fetch() {
 			echo >&2 "Failed to fetch $1. Aborting install.";
 			exit 1;
 		}
+		elif command -v fetch >/dev/null 2>&1; then
+		curl -sf4L $1 > $2 || { 
+			echo >&2 "Failed to fetch $1. Aborting install.";
+			exit 1;
+		}	
 	else
-		echo "Unable to find curl or wget, can not fetch needed files"
+		echo "Unable to find curl, fetch, or wget, can not fetch needed files"
 		exit 1
 	fi
 }
