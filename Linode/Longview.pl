@@ -59,7 +59,7 @@ $logger->logdie('Longview must be run as root in order to collect data') unless 
 my $pid = check_already_running();
 $logger->logdie("The Longview agent is already running as PID: $pid") if $pid;
 
-my $confdir    = '/etc/linode';
+my $confdir    = '/usr/local/etc/linode';
 my $api_key_file = "$confdir/longview.key";
 
 
