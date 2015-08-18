@@ -12,7 +12,7 @@ http_fetch() {
 			exit 1;
 		}
 		elif command -v fetch >/dev/null 2>&1; then
-		curl -sf4L $1 > $2 || { 
+		fetch $1 > $2 || { 
 			echo >&2 "Failed to fetch $1. Aborting install.";
 			exit 1;
 		}	
