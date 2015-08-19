@@ -4,6 +4,9 @@ Linode Longview
 ## Overview
 Longview is a system level statistics collection and graphing service, powered by the Longview open source software agent that can be installed onto any UNIX-like system. The Longview agent collects system statistics and sends them to us, where we store the data and present it in beautiful and meaningful ways.
 
+## BRANCH NOTES
+This branch currently only supports FreeBSD, and primary development is focused on implementing said support. Work is being done to ultimately make the changes compatible with upstream, so that they can be merged in without breaking compatibility with Linux.
+
 ### Preview
 
 The Linode Manager allows you to interact with data collected and analyze your system's resource usage. You can drill into individual servers:
