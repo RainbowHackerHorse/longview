@@ -67,7 +67,7 @@ our $SLEEP_TIME = 60;
 our $apikey;
 
 my $pid_file    = '/var/run/longview.pid';
-my $conf_path   = '/etc/linode/longview.d/';
+my $conf_path   = '/usr/local/etc/linode/longview.d/';
 my $slots = 10;
 my %push_iteration;
 
