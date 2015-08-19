@@ -2,7 +2,7 @@ Linode Longview
 ===============
 
 ## Overview
-Longview is a system level statistics collection and graphing service, powered by the Longview open source software agent that can be installed onto any Linux system. The Longview agent collects system statistics and sends them to us, where we store the data and present it in beautiful and meaningful ways.
+Longview is a system level statistics collection and graphing service, powered by the Longview open source software agent that can be installed onto any UNIX-like system. The Longview agent collects system statistics and sends them to us, where we store the data and present it in beautiful and meaningful ways.
 
 ### Preview
 
@@ -16,7 +16,7 @@ Linode Longview also gives you a high-level view of your fleet and lets you sort
 
 ### Features
 
-* Compatibility with Linux-based operating systems, Linode and non-Linode.
+* Compatibility with UNIX-like operating systems, Linode and non-Linode. This includes Linux, and FreeBSD currently.
 * An open-source software agent
 * Up-to-the-minute information about each system
 * Overview dashboard for all systems
@@ -38,11 +38,11 @@ The Longview client requires perl 5.8 or higher.
 
 ### Kernel
 
-The Longview client should be running with a 2.6 or higher kernel. 
+The Longview client should be running with a 2.6 or higher kernel if on Linux. 
 
 ### Operating system
 
-The Longview client can be installed on any system running Linux. Linode provides packages for Debian, Ubuntu, CentOS, and Fedora. A tagged release tarball is provided for systems without a pre-rolled package.
+The Longview client can be installed on any system running Linux, or FreeBSD. Linode provides packages for Debian, Ubuntu, CentOS, and Fedora. A tagged release tarball is provided for systems without a pre-rolled package. 
 
 ## Client usage
 
@@ -50,7 +50,7 @@ The Longview client can be installed on any system running Linux. Linode provide
 
 The client is normally installed by running a one-liner provided by the Linode Manager, which will automatically detect your operating system and drop your client's API key onto the filesystem.
 
-The client installs itself to /opt/linode/longview and will drop the API key under /etc/linode/longview.key.
+The client installs itself to /opt/linode/longview on Linux, and /usr/local/linode/longview on FreeBSD and will drop the API key under /etc/linode/longview.key. On FreeBSD, the key is located in /usr/local/etc/linode/longview.key
 
 Alternately, you can obtain a full copy of the repository, which will allow the Extras/install-dependencies.sh script to install (using cpanm) all required perl modules in a lib directory in your local copy of the repository.
 
